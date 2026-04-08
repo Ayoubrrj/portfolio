@@ -1,1 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap");
 @import "tailwindcss";
+
+@theme {
+    /* Tes couleurs et polices */
+    --color-brand-light: #f7f3ee;
+    --color-brand-beige: #dcc7b1;
+    --color-brand-neutral: #928e8a;
+    --color-brand-dark: #3a2f2a;
+
+    --font-serif: "Playfair Display", serif;
+    --font-sans: "Inter", sans-serif;
+
+    /* C'est ICI la correction : on utilise --animate-* */
+    --animate-blob: blobMove 8s linear infinite;
+}
+
+/* On sort les keyframes du @theme, c'est du pur CSS maintenant */
+@keyframes blobMove {
+    0%,
+    100% {
+        border-radius: 50%;
+    }
+    20% {
+        border-radius: 60% 40% 55% 45% / 50% 60% 40% 55%;
+    }
+    40% {
+        border-radius: 45% 55% 60% 40% / 55% 50% 60% 40%;
+    }
+    60% {
+        border-radius: 55% 45% 50% 60% / 60% 40% 55% 45%;
+    }
+    80% {
+        border-radius: 50% 60% 45% 55% / 45% 55% 50% 60%;
+    }
+}
+
+/* Configuration globale de base */
+@layer base {
+    html {
+        font-family: var(--font-sans);
+        color: var(--color-brand-dark);
+        background-color: var(--color-brand-light);
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-serif);
+        font-weight: normal;
+    }
+}
