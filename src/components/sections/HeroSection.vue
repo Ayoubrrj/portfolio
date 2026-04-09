@@ -14,10 +14,10 @@
                 <p
                     class="text-lg md:text-xl text-brand-dark/80 max-w-2xl leading-relaxed"
                 >
-                    Je suis étudiant en développement web. Mon but actuel :
-                    sortir des projets d'école et mettre les mains sur des vrais
-                    cas concrets. J'ai l'énergie, la motivation, il ne me manque
-                    plus qu'un environnement pro pour faire mes preuves.
+                    J'aime la fluidité et l'interaction. Pour moi, coder n'est
+                    pas juste aligner des lignes, c'est transformer une idée en
+                    projet concret. C'est un terrain de jeu pour créer,
+                    apprendre et surtout s'amuser.
                 </p>
 
                 <div class="flex items-center gap-6 mt-4">
@@ -30,7 +30,8 @@
                         <span class="font-medium">GitHub</span>
                     </a>
                     <a
-                        href="#"
+                        href="/CV.pdf"
+                        download="CV_Ayoub"
                         target="_blank"
                         class="flex items-center gap-2 hover:opacity-60 transition-opacity"
                     >

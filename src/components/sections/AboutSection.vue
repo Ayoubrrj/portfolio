@@ -27,17 +27,18 @@
                 <h3
                     class="text-3xl md:text-4xl font-serif mb-4 border-b border-brand-light/30 pb-2 inline-block"
                 >
-                    Mon Parcours
+                    Présentation
                 </h3>
                 <p
                     class="font-sans text-sm sm:text-base md:text-lg leading-relaxed text-brand-light/90 max-w-md mx-auto"
                 >
-                    Passionné par le développement web, j'ai commencé mon
-                    parcours en apprenant les bases du HTML, CSS et JavaScript.
-                    Aujourd'hui, j'explore des technologies modernes comme
-                    Vue.js et Tailwind pour créer des interfaces fluides et
-                    esthétiques. J'aime résoudre des problèmes complexes et
-                    donner vie à des designs créatifs.
+                    Je suis étudiant en développement web, mon but est de sortir
+                    des projets d'école pour relever de vrais défis
+                    professionnels. En cours, je travaille sur le design avec
+                    Figma, le front-end via Vue.js et Tailwind, ainsi que le
+                    back-end avec PHP, Laravel, MySQL et WordPress. J'ai
+                    l'énergie et la détermination, il ne me manque plus que
+                    l'expérience de terrain.
                 </p>
             </div>
         </div>
@@ -47,12 +48,12 @@
 <script setup>
 import { ref } from "vue";
 
-// État réactif pour savoir si la souris survole le blob
+// État réactif pour savoir si la souris survole le blob (cercle)
 const isHovered = ref(false);
 </script>
 
 <style scoped>
-/* Petit fade-in pour le texte intérieur quand il apparaît */
+/* Petit fade-in pour le texte intérieur quand il apparaît  et un peu plus loin attendre un peu avant que le texte apparaisse*/
 .animate-fade-in-delayed {
     animation: fadeInDelayed 0.8s ease-in-out forwards;
 }
@@ -64,7 +65,7 @@ const isHovered = ref(false);
     }
     40% {
         opacity: 0;
-    } /* On attend un peu que le blob grandisse avant d'afficher le texte */
+    }
     100% {
         opacity: 1;
         transform: translateY(0);

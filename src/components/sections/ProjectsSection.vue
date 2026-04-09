@@ -18,7 +18,6 @@
                         v-for="(project, index) in projects"
                         :key="index"
                         @mouseenter="activeProject = index"
-                        @mouseleave="activeProject = null"
                         class="group flex justify-between items-center py-8 border-b border-brand-dark/30 transition-colors"
                     >
                         <a
@@ -40,9 +39,9 @@
                 </div>
             </div>
 
-            <div class="hidden lg:flex items-center justify-center">
+            <div class="hidden lg:flex items-center justify-center w-full">
                 <div
-                    class="w-full h-[80vh] bg-brand-dark relative overflow-hidden transition-all duration-500"
+                    class="w-full max-w-[500px] xl:max-w-[800px] h-[80vh] bg-brand-dark relative overflow-hidden transition-all duration-500"
                 >
                     <img
                         v-if="
@@ -63,30 +62,29 @@
 import { ref } from "vue";
 
 import githubProfilImg from "../../assets/images/github-profil.png";
-import portfolioImg from "../../assets/images/self-portrait.png";
+import ShoppingCardImg from "../../assets/images/ShoppingCard.png";
 import buildAndRespawnImg from "../../assets/images/build-and-respawn.png";
 import autreImg from "../../assets/images/autre.png";
-const activeProject = ref(null);
 
-// J'ai ajouté une clé 'github' à chaque projet
+// On commence à 0 (le premier projet)
+const activeProject = ref(0);
+
 const projects = [
     {
-        title: "Mon Portfolio",
+        title: "Shopping card",
         tech: "Html\nTailwind Css\nVue.js",
-        image: portfolioImg,
-        github: "https://github.com/Ayoubrrj/portfolio",
+        image: ShoppingCardImg,
+        github: "https://examen-framewwork-client.vercel.app/",
     },
     {
         title: "Build and Respawn",
         tech: "Wordpress\ntheme\nplugin",
         image: buildAndRespawnImg,
-        github: "https://github.com/ton-pseudo/build-and-respawn",
     },
     {
         title: "Projets Perso",
         tech: "Html\nCss\nJs",
         image: autreImg,
-        github: "https://github.com/ton-pseudo/projet-perso",
     },
     {
         title: "Autres Projets",
